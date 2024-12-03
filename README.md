@@ -26,15 +26,18 @@ Ensure that the chromedriver.exe is in your system's PATH or specify the full pa
 5. Directory Structure
 The project follows the structure below:
 /TAQTICS - ASSIGNMENT
+
     ├── /API TESTING
-        ├── api_test.robot
-        ├── results
-        ├── requirements.txt
+             ├── api_test.robot
+             ├── results
+             ├── requirements.txt
+   
     ├── /images
+   
     ├── /LOGIN automation
-        ├── login_test.robot
-        ├── /results
-        ├── /requirements.txt
+           ├── login_test.robot
+           ├── /results
+           ├── /requirements.txt
             
 5. Required Files
 login_test.robot: Contains the test cases for the login functionality.
