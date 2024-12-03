@@ -108,12 +108,12 @@ Or manually navigate to the results folder and open report.html using your prefe
 
 
 Dashboard report of the test cases--- 
-https://github.com/A2922/Taqtics/blob/main/images/dashboard.JPG
+![](https://github.com/A2922/Taqtics/blob/main/images/log.JPG)
 
-https://github.com/A2922/Taqtics/blob/main/images/dashboard.JPG
+![](https://github.com/A2922/Taqtics/blob/main/images/dashboard.JPG)
 
 
 Log Report of test cases -- 
-https://github.com/A2922/Taqtics/blob/main/images/log.JPG
+![](https://github.com/A2922/Taqtics/blob/main/images/log.JPG)
 
 
