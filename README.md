@@ -1,16 +1,7 @@
 Login Automation with Robot Framework
-This repository contains automation test cases for login functionality using Robot Framework, which simulates different login scenarios and tests the system's behavior. The tests cover a range of login cases like valid login, invalid login, SQL injection, and more.
 
-Table of Contents
-Project Overview
-Tools & Technologies
-Setup Instructions
-Test Cases
-Running the Tests
-Test Reports
-License
-Project Overview
-This project aims to validate the login functionality of the application through automation tests. It ensures that various edge cases are handled properly by the system. The test suite includes both positive and negative test cases to check how the system responds to different login conditions.
+This repository contains automation test cases for login functionality using Robot Framework, which simulates different login scenarios and tests the system's behavior. The tests cover a range of login cases and api cases.
+
 
 Tools & Technologies
 1. Robot Framework
@@ -117,12 +108,12 @@ Or manually navigate to the results folder and open report.html using your prefe
 
 
 Dashboard report of the test cases--- 
-(images/dashboard.png)
+https://github.com/A2922/Taqtics/blob/main/images/dashboard.JPG
 
-(images/dashboard2.png)
+https://github.com/A2922/Taqtics/blob/main/images/dashboard.JPG
 
 
 Log Report of test cases -- 
-(images/log.png)
+https://github.com/A2922/Taqtics/blob/main/images/log.JPG
 
 
