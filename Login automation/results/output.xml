@@ -1,0 +1,527 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1.1 (Python 3.12.4 on win32)" generated="2024-12-03T13:07:41.514144" rpa="false" schemaversion="5">
+<suite id="s1" name="Login Test" source="E:\Taqtics - assignment\Login automation\login_test.robot">
+<kw name="Open Browser to Login Page" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-12-03T13:07:41.998554" level="INFO">Opening browser 'chrome' to base url 'https://landmark.taqtics.co/'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-12-03T13:07:41.998554" elapsed="10.778556"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-12-03T13:07:52.777110" elapsed="0.083513"/>
+</kw>
+<status status="PASS" start="2024-12-03T13:07:41.998554" elapsed="10.862069"/>
+</kw>
+<test id="s1-t1" name="Valid Login" line="14">
+<kw name="Input Email">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-12-03T13:07:52.863621" level="INFO">Typing text 'intern@taqtics.co' into text field 'id=email'.</msg>
+<arg>id=email</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-03T13:07:52.862619" elapsed="0.508624"/>
+</kw>
+<arg>${VALID_EMAIL}</arg>
+<status status="PASS" start="2024-12-03T13:07:52.862619" elapsed="0.509635"/>
+</kw>
+<kw name="Input Password">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-12-03T13:07:53.376246" level="INFO">Typing text 'TestIntern@123' into text field 'id=password'.</msg>
+<arg>id=password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-03T13:07:53.376246" elapsed="0.289784"/>
+</kw>
+<arg>${VALID_PASSWORD}</arg>
+<status status="PASS" start="2024-12-03T13:07:53.375242" elapsed="0.291793"/>
+</kw>
+<kw name="Click Login Button">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-12-03T13:07:53.669032" level="INFO">Clicking button 'css=button[type="submit"]'.</msg>
+<arg>css=button[type="submit"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-03T13:07:53.668029" elapsed="0.303747"/>
+</kw>
+<status status="PASS" start="2024-12-03T13:07:53.667035" elapsed="0.305070"/>
+</kw>
+<kw name="Wait Until Location Contains" owner="SeleniumLibrary">
+<arg>${DASHBOARD_URL}</arg>
+<arg>10s</arg>
+<doc>Waits until the current URL contains ``expected``.</doc>
+<status status="PASS" start="2024-12-03T13:07:53.974821" elapsed="0.576015"/>
+</kw>
+<kw name="Click Intern Menu">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-12-03T13:07:54.551894" level="INFO">Clicking element 'css=#root &gt; div.header_container &gt; div &gt; span'.</msg>
+<arg>css=#root &gt; div.header_container &gt; div &gt; span</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-03T13:07:54.551894" elapsed="0.150827"/>
+</kw>
+<status status="PASS" start="2024-12-03T13:07:54.550836" elapsed="0.151885"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-12-03T13:07:59.703300" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-12-03T13:07:54.702721" elapsed="5.001295"/>
+</kw>
+<kw name="Click Logout Button">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-12-03T13:07:59.709056" level="INFO">Clicking element 'xpath=/html/body/div[2]/div/div/ul/li[2]'.</msg>
+<arg>xpath=/html/body/div[2]/div/div/ul/li[2]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-03T13:07:59.708012" elapsed="1.971417"/>
+</kw>
+<status status="PASS" start="2024-12-03T13:07:59.707050" elapsed="1.973384"/>
+</kw>
+<kw name="Wait Until Location Contains" owner="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>10s</arg>
+<doc>Waits until the current URL contains ``expected``.</doc>
+<status status="PASS" start="2024-12-03T13:08:01.681436" elapsed="0.390369"/>
+</kw>
+<status status="PASS" start="2024-12-03T13:07:52.860623" elapsed="9.215574"/>
+</test>
+<test id="s1-t2" name="SQL Injection Attempt" line="25">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-12-03T13:08:04.082089" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-12-03T13:08:02.081381" elapsed="2.000708"/>
+</kw>
+<kw name="Input Email">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-12-03T13:08:04.085089" level="INFO">Typing text '' into text field 'id=email'.</msg>
+<arg>id=email</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-03T13:08:04.084092" elapsed="0.153689"/>
+</kw>
+<arg>${EMPTY}</arg>
+<status status="PASS" start="2024-12-03T13:08:04.083091" elapsed="0.154690"/>
+</kw>
+<kw name="Input Password">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-12-03T13:08:04.237781" level="INFO">Typing text '' into text field 'id=password'.</msg>
+<arg>id=password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-03T13:08:04.237781" elapsed="0.134600"/>
+</kw>
+<arg>${EMPTY}</arg>
+<status status="PASS" start="2024-12-03T13:08:04.237781" elapsed="0.134600"/>
+</kw>
+<kw name="Input Email">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-12-03T13:08:04.372381" level="INFO">Typing text '' OR 1=1 --' into text field 'id=email'.</msg>
+<arg>id=email</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-03T13:08:04.372381" elapsed="0.268868"/>
+</kw>
+<arg>' OR 1=1 --</arg>
+<status status="PASS" start="2024-12-03T13:08:04.372381" elapsed="0.268868"/>
+</kw>
+<kw name="Input Password">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-12-03T13:08:04.645248" level="INFO">Typing text '' into text field 'id=password'.</msg>
+<arg>id=password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-03T13:08:04.644249" elapsed="0.229280"/>
+</kw>
+<arg>${EMPTY}</arg>
+<status status="PASS" start="2024-12-03T13:08:04.642247" elapsed="0.231282"/>
+</kw>
+<kw name="Click Login Button">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-12-03T13:08:04.873529" level="INFO">Clicking button 'css=button[type="submit"]'.</msg>
+<arg>css=button[type="submit"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-03T13:08:04.873529" elapsed="0.161901"/>
+</kw>
+<status status="PASS" start="2024-12-03T13:08:04.873529" elapsed="0.177524"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Please input valid email!</arg>
+<arg>5s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-12-03T13:08:05.052587" elapsed="0.024070"/>
+</kw>
+<doc>Validate the system's resistance to SQL injection attempts in the email and password fields.</doc>
+<status status="PASS" start="2024-12-03T13:08:02.080246" elapsed="2.996411"/>
+</test>
+<test id="s1-t3" name="Case Sensitivity in Login" line="36">
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2024-12-03T13:08:05.087853" level="INFO">Executing JavaScript:
+window.open('https://landmark.taqtics.co/', '_blank')
+Without any arguments.</msg>
+<arg>window.open('https://landmark.taqtics.co/', '_blank')</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2024-12-03T13:08:05.086853" elapsed="0.112597"/>
+</kw>
+<kw name="Switch Window" owner="SeleniumLibrary">
+<arg>NEW</arg>
+<arg>5s</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" start="2024-12-03T13:08:05.199450" elapsed="0.198369"/>
+</kw>
+<kw name="Input Email">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-12-03T13:08:05.400812" level="INFO">Typing text '' into text field 'id=email'.</msg>
+<arg>id=email</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-03T13:08:05.399817" elapsed="0.669659"/>
+</kw>
+<arg>${EMPTY}</arg>
+<status status="PASS" start="2024-12-03T13:08:05.398813" elapsed="0.670663"/>
+</kw>
+<kw name="Input Password">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-12-03T13:08:06.071383" level="INFO">Typing text '' into text field 'id=password'.</msg>
+<arg>id=password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-03T13:08:06.071383" elapsed="0.206767"/>
+</kw>
+<arg>${EMPTY}</arg>
+<status status="PASS" start="2024-12-03T13:08:06.071383" elapsed="0.206767"/>
+</kw>
+<kw name="Input Email">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-12-03T13:08:06.279297" level="INFO">Typing text 'INTERN@TAQTICS.CO' into text field 'id=email'.</msg>
+<arg>id=email</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-03T13:08:06.279297" elapsed="0.385455"/>
+</kw>
+<arg>INTERN@TAQTICS.CO</arg>
+<status status="PASS" start="2024-12-03T13:08:06.279297" elapsed="0.385455"/>
+</kw>
+<kw name="Input Password">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-12-03T13:08:06.666756" level="INFO">Typing text 'testintern@123' into text field 'id=password'.</msg>
+<arg>id=password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-03T13:08:06.665750" elapsed="0.271750"/>
+</kw>
+<arg>testintern@123</arg>
+<status status="PASS" start="2024-12-03T13:08:06.665750" elapsed="0.271750"/>
+</kw>
+<kw name="Click Login Button">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-12-03T13:08:06.940957" level="INFO">Clicking button 'css=button[type="submit"]'.</msg>
+<arg>css=button[type="submit"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-03T13:08:06.939898" elapsed="0.162608"/>
+</kw>
+<status status="PASS" start="2024-12-03T13:08:06.939898" elapsed="0.162608"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Invalid Credentials!</arg>
+<arg>5s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-12-03T13:08:07.102506" elapsed="0.451216"/>
+</kw>
+<doc>Ensure the email and password fields are case-sensitive during login.</doc>
+<status status="PASS" start="2024-12-03T13:08:05.084854" elapsed="2.468868"/>
+</test>
+<test id="s1-t4" name="Login with Empty Credentials" line="51">
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2024-12-03T13:08:07.553722" level="INFO">Executing JavaScript:
+window.open('https://landmark.taqtics.co/', '_blank')
+Without any arguments.</msg>
+<arg>window.open('https://landmark.taqtics.co/', '_blank')</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2024-12-03T13:08:07.553722" elapsed="0.101213"/>
+</kw>
+<kw name="Switch Window" owner="SeleniumLibrary">
+<arg>NEW</arg>
+<arg>5s</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" start="2024-12-03T13:08:07.655945" elapsed="0.151053"/>
+</kw>
+<kw name="Input Email">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-12-03T13:08:07.808642" level="INFO">Typing text '' into text field 'id=email'.</msg>
+<arg>id=email</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-03T13:08:07.808642" elapsed="0.473872"/>
+</kw>
+<arg>${EMPTY}</arg>
+<status status="PASS" start="2024-12-03T13:08:07.808642" elapsed="0.474874"/>
+</kw>
+<kw name="Input Password">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-12-03T13:08:08.286515" level="INFO">Typing text '' into text field 'id=password'.</msg>
+<arg>id=password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-03T13:08:08.286515" elapsed="0.194114"/>
+</kw>
+<arg>${EMPTY}</arg>
+<status status="PASS" start="2024-12-03T13:08:08.284518" elapsed="0.196111"/>
+</kw>
+<kw name="Click Login Button">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-12-03T13:08:08.482629" level="INFO">Clicking button 'css=button[type="submit"]'.</msg>
+<arg>css=button[type="submit"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-03T13:08:08.482629" elapsed="0.210627"/>
+</kw>
+<status status="PASS" start="2024-12-03T13:08:08.481629" elapsed="0.211627"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Please input your email!</arg>
+<arg>10s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-12-03T13:08:08.694255" elapsed="0.031690"/>
+</kw>
+<doc>Ensure the system rejects attempts to log in with empty email and password fields.</doc>
+<status status="PASS" start="2024-12-03T13:08:07.553722" elapsed="1.172223"/>
+</test>
+<test id="s1-t5" name="Invalid Login - Incorrect Password" line="65">
+<kw name="Input Email">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-12-03T13:08:08.725945" level="INFO">Typing text 'intern@taqtics.co' into text field 'id=email'.</msg>
+<arg>id=email</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-03T13:08:08.725945" elapsed="0.391395"/>
+</kw>
+<arg>${VALID_EMAIL}</arg>
+<status status="PASS" start="2024-12-03T13:08:08.725945" elapsed="0.391395"/>
+</kw>
+<kw name="Input Password">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-12-03T13:08:09.119753" level="INFO">Typing text 'WrongPassword123' into text field 'id=password'.</msg>
+<arg>id=password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-03T13:08:09.119753" elapsed="0.335356"/>
+</kw>
+<arg>WrongPassword123</arg>
+<status status="PASS" start="2024-12-03T13:08:09.119753" elapsed="0.335356"/>
+</kw>
+<kw name="Click Login Button">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-12-03T13:08:09.457726" level="INFO">Clicking button 'css=button[type="submit"]'.</msg>
+<arg>css=button[type="submit"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-03T13:08:09.457726" elapsed="0.218001"/>
+</kw>
+<status status="PASS" start="2024-12-03T13:08:09.456110" elapsed="0.219617"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Invalid Credentials!</arg>
+<arg>5s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-12-03T13:08:09.676725" elapsed="0.890741"/>
+</kw>
+<kw name="Location Should Contain" owner="SeleniumLibrary">
+<msg time="2024-12-03T13:08:10.589895" level="INFO">Current location contains 'https://landmark.taqtics.co/'.</msg>
+<arg>${URL}</arg>
+<doc>Verifies that the current URL contains ``expected``.</doc>
+<status status="PASS" start="2024-12-03T13:08:10.567466" elapsed="0.022429"/>
+</kw>
+<doc>Ensure the system rejects logins with an invalid password.</doc>
+<status status="PASS" start="2024-12-03T13:08:08.725945" elapsed="1.864946"/>
+</test>
+<test id="s1-t6" name="Password with Special Characters" line="75">
+<kw name="Input Email">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-12-03T13:08:10.594898" level="INFO">Typing text 'intern@taqtics.co' into text field 'id=email'.</msg>
+<arg>id=email</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-03T13:08:10.593899" elapsed="0.339880"/>
+</kw>
+<arg>${VALID_EMAIL}</arg>
+<status status="PASS" start="2024-12-03T13:08:10.593899" elapsed="0.339880"/>
+</kw>
+<kw name="Input Password">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-12-03T13:08:10.933779" level="INFO">Typing text 'Test@#%$123' into text field 'id=password'.</msg>
+<arg>id=password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-03T13:08:10.933779" elapsed="0.256039"/>
+</kw>
+<arg>Test@#%$123</arg>
+<status status="PASS" start="2024-12-03T13:08:10.933779" elapsed="0.257037"/>
+</kw>
+<kw name="Click Login Button">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-12-03T13:08:11.192821" level="INFO">Clicking button 'css=button[type="submit"]'.</msg>
+<arg>css=button[type="submit"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-03T13:08:11.191819" elapsed="0.159558"/>
+</kw>
+<status status="PASS" start="2024-12-03T13:08:11.191819" elapsed="0.159558"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Invalid Credentials!</arg>
+<arg>5s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-12-03T13:08:11.351377" elapsed="0.027740"/>
+</kw>
+<doc>Validate that the system allows special characters in the password.</doc>
+<status status="PASS" start="2024-12-03T13:08:10.591891" elapsed="0.787226"/>
+</test>
+<test id="s1-t7" name="Login with Unregistered Email" line="83">
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2024-12-03T13:08:11.381118" level="INFO">Executing JavaScript:
+window.open('https://landmark.taqtics.co/', '_blank')
+Without any arguments.</msg>
+<arg>window.open('https://landmark.taqtics.co/', '_blank')</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2024-12-03T13:08:11.381118" elapsed="0.099028"/>
+</kw>
+<kw name="Switch Window" owner="SeleniumLibrary">
+<arg>NEW</arg>
+<arg>5s</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" start="2024-12-03T13:08:11.481147" elapsed="0.272735"/>
+</kw>
+<kw name="Input Email">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-12-03T13:08:11.757055" level="INFO">Typing text 'ankit@taqtics.com' into text field 'id=email'.</msg>
+<arg>id=email</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-03T13:08:11.757055" elapsed="0.969217"/>
+</kw>
+<arg>ankit@taqtics.com</arg>
+<status status="PASS" start="2024-12-03T13:08:11.756053" elapsed="0.971221"/>
+</kw>
+<kw name="Input Password">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-12-03T13:08:12.732275" level="INFO">Typing text 'TestIntern@123' into text field 'id=password'.</msg>
+<arg>id=password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-03T13:08:12.732275" elapsed="0.340178"/>
+</kw>
+<arg>${VALID_PASSWORD}</arg>
+<status status="PASS" start="2024-12-03T13:08:12.731274" elapsed="0.341179"/>
+</kw>
+<kw name="Click Login Button">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-12-03T13:08:13.079117" level="INFO">Clicking button 'css=button[type="submit"]'.</msg>
+<arg>css=button[type="submit"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-03T13:08:13.078094" elapsed="0.192419"/>
+</kw>
+<status status="PASS" start="2024-12-03T13:08:13.078094" elapsed="0.192419"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Not Found</arg>
+<arg>5s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-12-03T13:08:13.270513" elapsed="0.263126"/>
+</kw>
+<doc>Ensure the system rejects attempts to log in with an unregistered email.</doc>
+<status status="PASS" start="2024-12-03T13:08:11.380118" elapsed="2.153521"/>
+</test>
+<test id="s1-t8" name="Login with Long Input Values" line="96">
+<kw name="Input Email">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-12-03T13:08:13.533639" level="INFO">Typing text '' into text field 'id=email'.</msg>
+<arg>id=email</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-03T13:08:13.533639" elapsed="0.198353"/>
+</kw>
+<arg>${EMPTY}</arg>
+<status status="PASS" start="2024-12-03T13:08:13.533639" elapsed="0.199358"/>
+</kw>
+<kw name="Input Password">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-12-03T13:08:13.734806" level="INFO">Typing text '' into text field 'id=password'.</msg>
+<arg>id=password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-03T13:08:13.734806" elapsed="0.143062"/>
+</kw>
+<arg>${EMPTY}</arg>
+<status status="PASS" start="2024-12-03T13:08:13.734806" elapsed="0.143062"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-12-03T13:08:13.879863" level="INFO">${long_email} = aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa...</msg>
+<var>${long_email}</var>
+<arg>${EMPTY.join([char * 256 for char in 'a'])}@example.com</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-12-03T13:08:13.877868" elapsed="0.001995"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-12-03T13:08:13.881868" level="INFO">${long_password} = aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa...</msg>
+<var>${long_password}</var>
+<arg>${EMPTY.join(['a' * 256])}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-12-03T13:08:13.879863" elapsed="0.002005"/>
+</kw>
+<kw name="Input Email">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-12-03T13:08:13.884868" level="INFO">Typing text 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa@example.com' into text field 'id=email'.</msg>
+<arg>id=email</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-03T13:08:13.883865" elapsed="2.054363"/>
+</kw>
+<arg>${long_email}</arg>
+<status status="PASS" start="2024-12-03T13:08:13.882865" elapsed="2.056161"/>
+</kw>
+<kw name="Input Password">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-12-03T13:08:15.939026" level="INFO">Typing text 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa' into text field 'id=password'.</msg>
+<arg>id=password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-03T13:08:15.939026" elapsed="1.694800"/>
+</kw>
+<arg>${long_password}</arg>
+<status status="PASS" start="2024-12-03T13:08:15.939026" elapsed="1.695795"/>
+</kw>
+<kw name="Click Login Button">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-12-03T13:08:17.637823" level="INFO">Clicking button 'css=button[type="submit"]'.</msg>
+<arg>css=button[type="submit"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-03T13:08:17.636825" elapsed="0.170235"/>
+</kw>
+<status status="PASS" start="2024-12-03T13:08:17.635827" elapsed="0.171233"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Please input valid email!</arg>
+<arg>12s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-12-03T13:08:17.809064" elapsed="0.017903"/>
+</kw>
+<doc>Ensure the system rejects excessively long input values for email and password.</doc>
+<status status="PASS" start="2024-12-03T13:08:13.533639" elapsed="4.293328"/>
+</test>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-12-03T13:08:17.826967" elapsed="2.499578"/>
+</kw>
+<status status="PASS" start="2024-12-03T13:07:41.529731" elapsed="38.796814"/>
+</suite>
+<statistics>
+<total>
+<stat pass="8" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="8" fail="0" skip="0" id="s1" name="Login Test">Login Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
